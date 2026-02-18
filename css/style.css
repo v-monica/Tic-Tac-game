@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #fa3ca5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+#contenedor {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #5a022b;
+    color: white;
+    font-weight: bold;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+button:hover {
+    background: #fff;
+    color: #5a022b;
+    transform: scale(1.05);
+}
+
+#tablero {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+}
+
+.celda {
+    background: white;
+    color: black;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+.celda:hover {
+    background: #f8b2db;
+    transform: scale(1.05);
+}
+
+#reiniciar {
+    margin-top: 15px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #5a022b;
+    color: white;
+    font-weight: bold;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+#reiniciar:hover {
+    background: #fff;
+    color: #5a022b;
+    transform: scale(1.05);
+}
+
+@media (max-width: 780px) {
+
+    #tablero {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 90vw;
+        max-width: 350px;
+        transition: background 0.3s ease;
+    }
+
+    .celda {
+        aspect-ratio: 1 / 1;
+        font-size: 3rem;
+        transform: scale(0.9);
+    }
+
+}
+
