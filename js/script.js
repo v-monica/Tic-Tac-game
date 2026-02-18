@@ -89,7 +89,7 @@ function verificarGanador() {
 function reiniciarJuego() {
 
   tablero = ["", "", "", "", "", "", "", "", ""];
-  turno = "X";
+  turno = "";
   juegoActivo = false;
 
   textoTurno.textContent = turno;
