@@ -57,13 +57,44 @@ button:hover {
     align-items: center;
     cursor: pointer;
     border-radius: 8px;
-    transition: background 0.2s ease;
+    transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .celda:hover {
-    background: #f8b2db;
-    transform: scale(1.05);
+    transform: translateY(-6px) scale(1.06);
+    border: dashed 3px #fa3ca5;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.22);
+    z-index: 2;
 }
+
+
+.celda.x {
+    color: #0b6bff; 
+    font-weight: 700;
+}
+
+.celda.o {
+    color: #00c48c; 
+    font-weight: 700;
+}
+
+
+#tablero.locked {
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+#tablero.locked .celda {
+    cursor: not-allowed;
+}
+
+#tablero.locked .celda:hover {
+    transform: none;
+    background: white;
+    box-shadow: none;
+    z-index: auto;
+}
+
 
 #reiniciar {
     margin-top: 15px;
